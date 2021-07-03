@@ -1,0 +1,158 @@
+.slider {
+	height: 100vh;
+
+	&-container {
+		display: flex;		
+		height: 100vh;
+	}
+
+	&-item {
+		position: relative;
+		height: 100vh;
+		flex-basis: 90px;
+		overflow: hidden;
+		transition: all 1s;
+
+		&.active {
+			flex-basis: 100%;
+		}
+
+		&__side-title {
+			display: flex;
+			align-items: flex-end;			
+			position: absolute;
+			bottom: 30px;
+			left: 20px;
+			transform: rotate(180deg);
+			writing-mode: vertical-lr;
+			font-size: 30px;
+			font-weight: 300;
+			transition: all 1s;
+			
+			& span:first-child {
+				margin-bottom: 7px;
+			}
+
+			& .company {
+				font-size: 12px;
+			}
+		}
+
+		&.active {
+			.slider-item__side-title {			
+				left: 40px;
+			}
+		}
+
+		&__image {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: left;			
+		}
+
+		&__darken {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: black;
+			opacity: .3;
+		}
+
+		&__content {
+			display: none;
+			flex-direction: column;
+			justify-content: space-between;
+			position: absolute;
+			width: 100%;
+			min-width: 1000px;
+			height: 100%;
+			top: 0;
+			left: 0;			
+			z-index: 10;
+			padding: 30px 40px;
+		}
+
+		&__title {
+			display: flex;
+			align-items: flex-start;
+			margin-bottom: 24px;
+
+			&-name {
+				font-size: 82px;
+				font-weight: 300;
+				line-height: 1;
+				margin-right: 24px;
+			}
+
+			&-company {
+				font-size: 48px;
+				font-weight: 300;
+				line-height: 1;
+			}			
+		}
+
+		&__address {
+			display: flex;
+
+			& span {
+				font-size: 10px;
+				font-weight: 400;
+				text-transform: uppercase;
+
+				&:not(:last-child) {
+					margin-right: 45px;
+				}					
+			}								
+		}
+
+		&__content-bottom {
+			display: flex;
+			padding-left: 85px;
+
+			& a {
+				position: relative;
+				top: 15px;
+				font-size: 12px;
+				font-weight: 300;
+				text-transform: uppercase;
+				color: white;
+				text-decoration: none;
+				height: fit-content;
+				background: url('../../images/link-arrow.svg') no-repeat left center;				
+				padding: 15px 0 15px 84px;				
+			}
+		}
+
+		&__parameters {
+			display: flex;
+			flex-direction: column;
+			margin-right: 50px;
+
+			& .name {
+				font-size: 10px;
+				font-weight: 300;
+				text-transform: uppercase;
+				margin-bottom: 10px;
+			}
+
+			& .value {
+				font-size: 30px;
+				font-weight: 300;
+			}
+		}
+
+		&.active {
+			& .slider-item__content {
+				display: flex;
+			}
+		}
+	}
+
+	
+}

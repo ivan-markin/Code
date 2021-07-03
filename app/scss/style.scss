@@ -1,0 +1,14 @@
+@import './normalize.scss';
+@import './fonts.scss';
+
+@import './blocks/slider.scss';
+@import './blocks/main-screen.scss';
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'TTNorms', 'Roboto', sans-serif;
+	color: white;
+}
