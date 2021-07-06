@@ -1,0 +1,35 @@
+.mobile-head {
+	display: none;
+
+	&__logo {
+		height: 7vh;
+		margin-right: 20px;
+	}
+
+	@media (max-width: 560px) {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 10vh;		
+		padding: 0 10px;
+
+		&__left {
+			display: flex;			
+			align-items: center;
+		}
+
+		&__menu-icon {
+			width: 30px;			
+			margin-right: 10px;
+			
+			& div {
+				height: 1px;
+				background-color: #F94822;								
+
+				&:not(:last-child) {
+					margin-bottom: 7px;
+				}
+			}
+		}
+	}
+}

@@ -10,13 +10,32 @@
 </head>
 
 <body>
+    <div class="mobile-menu-popup">
+        <a class="popup-close-button mobile-menu-popup__close"></a>
+        <nav class="mobile-menu-popup__menu">
+            <ul>
+                <li class="active"><a href="">Проекты</a></li>
+                <li><a href="">Команда</a></li>
+                <li><a href="">Брокерам</a></li>
+                <li><a href="">Собственникам</a></li>
+                <li><a href="">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
     <div class="video-popup">
-        <a class="video-popup__close"></a>
-        <video class="video-popup__video" src="./images/code-video.mp4" autoplay controls></video>
+        <a class="popup-close-button video-popup__close"></a>
+        <video class="video-popup__video" src="./images/code-video.mp4" controls></video>
     </div>
     <div class="mobile-head">
-        <img class="mobile-head__logo" src="./images/code-logo.svg" alt="CODE" width="50" height="50">
-        <a class="main-screen__phone" href="tel:+74952499090">+7 (495) 249 90 90</a>
+        <div class="mobile-head__left">
+            <img class="mobile-head__logo" src="./images/code-logo.svg" alt="CODE" width="50" height="50">
+            <a class="main-screen__phone" href="tel:+74952499090">+7 (495) 249 90 90</a>
+        </div>
+        <div class="mobile-head__menu-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
     <div class="swiper-container slider">
         <div class="swiper-wrapper slider-container">
@@ -160,6 +179,7 @@
                 </picture>
             </div>
 
+            <!-- 1905 -->
             <div class="swiper-slide slider-item">
                 <div class="slider-item__side-title">
                     <span class="name">1905</span>
@@ -167,7 +187,7 @@
                 <div class="slider-item__content">
                     <div class="slider-item__content-top">
                         <div class="slider-item__title">
-                            <span class="slider-item__title-name">1905</span>
+                            <span class="slider-item__title-name">CODE 1905</span>
                         </div>
                         <div class="slider-item__address">
                             <span class="slider-item__address-street">
@@ -197,9 +217,13 @@
                     </div>
                 </div>
                 <div class="slider-item__darken"></div>
-                <img class="slider-item__image" src="./images/slide-3.jpg" alt="Savcity">
+                <div class="slider-item__mosaic">
+                    <img src="./images/1905-pixeled.png" alt="">
+                </div>
+                <img class="slider-item__image" src="./images/1905.jpg" alt="Savcity">
             </div>
 
+            <!-- Ryabovskaya -->
             <div class="swiper-slide slider-item">
                 <div class="slider-item__side-title">
                     <span class="name">Ryabovskaya</span>
@@ -207,7 +231,7 @@
                 <div class="slider-item__content">
                     <div class="slider-item__content-top">
                         <div class="slider-item__title">
-                            <span class="slider-item__title-name">Ryabovskaya</span>
+                            <span class="slider-item__title-name">CODE Ryabovskaya</span>
                         </div>
                         <div class="slider-item__address">
                             <span class="slider-item__address-street">

@@ -4,8 +4,13 @@ const slides = document.querySelectorAll('.slider-item');
 let activeSlide = document.querySelector('.main-screen');
 const mosaicToggleElements = document.querySelectorAll('.slider-item__content-bottom');
 const playButton = document.querySelector('.main-screen__video-block-button');
-const closeButton = document.querySelector('.video-popup__close');
+const closeVideoButton = document.querySelector('.video-popup__close');
 const videoPopup = document.querySelector('.video-popup');
+const videoElement = document.querySelector('.video-popup__video');
+const mobileMenuPopup = document.querySelector('.mobile-menu-popup');
+const closeMenuButton = document.querySelector('.mobile-menu-popup__close');
+const openMenuButton = document.querySelector('.mobile-head__menu-icon');
+
 let swiper;
 
 function swiperInit() {
@@ -49,12 +54,14 @@ function openVideoPopup() {
 	document.addEventListener('keydown', (event) => {
 		if (event.code === 'Escape') {
 			videoPopup.classList.remove('active');
+			stopVideo();
 		}
 	})
 
 	document.addEventListener('click', (event) => {
 		if (event.target === videoPopup) {
 			videoPopup.classList.remove('active');
+			stopVideo();
 		}
 	})
 }
@@ -65,14 +72,29 @@ function closeVideoPopup() {
 	document.removeEventListener('keydown', (event) => {
 		if (event.code === 'Escape') {
 			videoPopup.classList.remove('active');
+			stopVideo();
 		}
 	})
 
 	document.removeEventListener('click', (event) => {
 		if (event.target === videoPopup) {
 			videoPopup.classList.remove('active');
+			stopVideo();
 		}
 	})
+}
+
+function stopVideo() {
+	videoElement.pause();
+	videoElement.currentTime = 0;
+}
+
+function openMobileMenu() {
+	mobileMenuPopup.classList.add('active');
+}
+
+function closeMobileMenu() {
+	mobileMenuPopup.classList.remove('active');
 }
 
 // Event listeners
@@ -86,8 +108,19 @@ mosaicToggleElements.forEach((element) => {
 	})
 })
 
-playButton.addEventListener('click', openVideoPopup)
-closeButton.addEventListener('click', closeVideoPopup)
+playButton.addEventListener('click', () => {
+	videoElement.play();
+	openVideoPopup();
+})
+
+closeVideoButton.addEventListener('click', () => {
+	closeVideoPopup();
+	stopVideo();
+})
+
+openMenuButton.addEventListener('click', openMobileMenu);
+
+closeMenuButton.addEventListener('click', closeMobileMenu);
 
 swiperInit();
 sliderInit();
