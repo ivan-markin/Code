@@ -121,7 +121,7 @@
                             <span class="name">Готовность</span>
                             <span class="value">3 кв. 2021</span>
                         </div>
-                        <a href="">Перейти на проект</a>
+                        <a href="#" class="amp-element-to-click">Перейти на проект</a>
                     </div>
                 </div>
                 <div class="slider-item__darken"></div>
@@ -169,7 +169,7 @@
                             <span class="name">Готовность</span>
                             <span class="value">4 кв. 2021</span>
                         </div>
-                        <a href="">Перейти на проект</a>
+                        <a href="#" class="amp-element-to-click">Перейти на проект</a>
                     </div>
                 </div>
                 <div class="slider-item__darken"></div>
@@ -217,7 +217,7 @@
                             <span class="name">Готовность</span>
                             <span class="value">4 кв. 2021</span>
                         </div>
-                        <a href="">Перейти на проект</a>
+                        <!-- <a href="">Перейти на проект</a> -->
                     </div>
                 </div>
                 <div class="slider-item__darken"></div>
@@ -261,7 +261,7 @@
                             <span class="name">Готовность</span>
                             <span class="value">1 кв. 2022</span>
                         </div>
-                        <a href="">Перейти на проект</a>
+                        <!-- <a href="">Перейти на проект</a> -->
                     </div>
                 </div>
                 <div class="slider-item__darken"></div>
@@ -273,6 +273,27 @@
         </div>
     </div>
     <script src="./bundle.js"></script>
+
+    <!-- ############# WEBSTORYZ INTEGRATION CODE ############# -->
+    <script id="ws-script">
+        window.webstoryzSettings = {
+            config: {
+                stories: [
+                    'https://examples.webstoryz.com/code/',
+                    'https://examples.webstoryz.com/code-yakimanka/',
+                ]
+            }
+        };
+        (function (u) {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = u;
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        })('https://cdn.webstoryz.com/integration-player-prod/player.js');
+    </script>
+    <!-- ############# / WEBSTORYZ INTEGRATION CODE ############# -->
 </body>
 
 </html>
