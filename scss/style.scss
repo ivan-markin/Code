@@ -1,0 +1,23 @@
+@import './normalize.scss';
+@import './fonts.scss';
+@import './swiper/swiper.scss';
+
+@import './blocks/slider.scss';
+@import './blocks/main-screen.scss';
+@import './blocks/mobile-head.scss';
+@import './blocks/video-popup.scss';
+@import './blocks/mobile-menu-popup.scss';
+@import './blocks/popup-close-button.scss';
+@import './blocks/temporary-content.scss';
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'TTNorms', 'Roboto', sans-serif;
+	color: white;
+	background-color: black;		  
+	margin: 0;
+	padding: 0;
+}
